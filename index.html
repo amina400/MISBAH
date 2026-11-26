@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#075b46">
+    <meta name="description" content="MISBAH - Your daily Islamic companion">
+    <title>MISBAH | Islamic Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+<header class="header">
+    <div class="brand">
+        <span class="brand-name">MISBAH</span>
+        <img src="ramadan-lamp.png" class="lantern-img" alt="Ramadan Lantern">
+    </div>
+    <button class="profile-btn" aria-label="Profile">M</button>
+</header>
+
+<!-- Greeting -->
+<div class="greeting">
+    <h2>As-salamu Alaikum</h2>
+    <p>Welcome to MISBAH</p>
+</div>
+
+
+<!-- Location and Date -->
+<div class="location">
+    <span>📍</span>
+    <span id="location">Dhaka, Bangladesh</span>
+    <span>•</span>
+    <span id="date"></span>
+</div>
+    
+   
+
+<!-- Premium Prayer Card -->
+
+<section class="prayer-card">
+
+    <div class="prayer-info">
+
+        <h2 id="nextPrayer">Maghrib</h2>
+
+        <p class="prayer-subtitle">Time to prayer</p>
+
+        <div class="prayer-time" id="prayerTime">
+            6:28 <span>PM</span>
+        </div>
+
+        <div class="prayer-divider"></div>
+
+        <p class="prayer-location">
+            Starts in <span id="countdown">12 min</span>
+        </p>
+
+    </div>
+
+
+
+  
+
+<div class="mosque-art">
+    <svg class="mosque-svg" viewBox="0 0 240 170"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+            <linearGradient id="goldMosque" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ffe9a8"/>
+                <stop offset="50%" stop-color="#d9a64e"/>
+                <stop offset="100%" stop-color="#93652d"/>
+            </linearGradient>
+
+            <radialGradient id="goldGlow">
+                <stop offset="0%" stop-color="#ffe9ad" stop-opacity=".9"/>
+                <stop offset="100%" stop-color="#ffe9ad" stop-opacity="0"/>
+            </radialGradient>
+        </defs>
+
+        <!-- Golden Glow -->
+        <ellipse cx="135" cy="110" rx="115" ry="85"
+                 fill="url(#goldGlow)"/>
+
+        <!-- Stars -->
+        <g fill="#ffe6a0">
+            <path d="M45 42 L48 51 L57 54 L48 57 L45 66 L42 57 L33 54 L42 51Z"/>
+            <path d="M185 25 L188 32 L195 35 L188 38 L185 45 L182 38 L175 35 L182 32Z"/>
+            <circle cx="90" cy="30" r="2"/>
+            <circle cx="215" cy="65" r="2"/>
+            <circle cx="65" cy="82" r="2"/>
+        </g>
+
+        <!-- Left Minaret -->
+        <rect x="27" y="65" width="17" height="91" rx="4"
+              fill="url(#goldMosque)"/>
+        <path d="M23 67 L35.5 34 L48 67Z"
+              fill="url(#goldMosque)"/>
+        <path d="M30 35 L35.5 22 L41 35Z"
+              fill="#ffe5a0"/>
+        <rect x="32" y="87" width="6" height="17" rx="3"
+              fill="#563b20"/>
+
+        <!-- Right Minaret -->
+        <rect x="195" y="65" width="17" height="91" rx="4"
+              fill="url(#goldMosque)"/>
+        <path d="M191 67 L203.5 34 L216 67Z"
+              fill="url(#goldMosque)"/>
+        <path d="M198 35 L203.5 22 L209 35Z"
+              fill="#ffe5a0"/>
+        <rect x="200" y="87" width="6" height="17" rx="3"
+              fill="#563b20"/>
+
+        <!-- Mosque Building -->
+        <rect x="48" y="105" width="144" height="55" rx="5"
+              fill="url(#goldMosque)"/>
+
+        <!-- Main Dome -->
+        <path d="M82 106 Q82 53 120 42 Q158 53 158 106Z"
+              fill="url(#goldMosque)"/>
+
+        <!-- Small Domes -->
+        <path d="M48 113 Q48 85 68 78 Q88 85 88 113Z"
+              fill="url(#goldMosque)"/>
+        <path d="M152 113 Q152 85 172 78 Q192 85 192 113Z"
+              fill="url(#goldMosque)"/>
+
+        <!-- Dome Decorations -->
+        <g stroke="#f9df9d" stroke-width="2" fill="none">
+            <path d="M120 42 V28"/>
+            <path d="M116 32 H124"/>
+        </g>
+
+        <!-- Main Entrance -->
+        <path d="M102 160 V127 Q120 100 138 127 V160Z"
+              fill="#51371e"/>
+        <path d="M108 160 V130 Q120 112 132 130 V160Z"
+              fill="#ffe3a0"/>
+
+        <!-- Side Doors -->
+        <path d="M59 160 V132 Q70 113 81 132 V160Z"
+              fill="#563b20"/>
+        <path d="M159 160 V132 Q170 113 181 132 V160Z"
+              fill="#563b20"/>
+
+        <!-- Soft Clouds -->
+        <path d="M0 158 Q18 139 37 153 Q55 135 76 157
+                 Q97 139 118 158 Q145 135 164 156
+                 Q190 137 212 157 Q226 148 240 157
+                 V170 H0Z"
+              fill="#ffe7b0" opacity=".65"/>
+
+        <!-- Ground Glow -->
+        <path d="M12 164 H228"
+              stroke="#f3d58e" stroke-width="2" opacity=".8"/>
+
+    </svg>
+</div>
+
+
+</section>
+
+<!-- Prayer Times -->
+<section class="prayer-times-section">
+    <div class="section-heading">
+        <h2>Prayer Times</h2>
+        <span>View All</span>
+    </div>
+
+    <div class="prayer-times-grid">
+        <div class="prayer-time-box">
+            <span>🌅</span>
+            <h3>Fajr</h3>
+            <p>4:45 AM</p>
+        </div>
+
+        <div class="prayer-time-box">
+            <span>☀️</span>
+            <h3>Dhuhr</h3>
+            <p>12:05 PM</p>
+        </div>
+
+        <div class="prayer-time-box">
+            <span>🌤️</span>
+            <h3>Asr</h3>
+            <p>3:35 PM</p>
+        </div>
+
+        <div class="prayer-time-box">
+            <span>🌇</span>
+            <h3>Maghrib</h3>
+            <p>6:28 PM</p>
+        </div>
+
+        <div class="prayer-time-box">
+            <span>🌙</span>
+            <h3>Isha</h3>
+            <p>7:45 PM</p>
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="section-heading">
+            <h2>Explore MISBAH</h2>
+            <span>بِسْمِ اللَّهِ</span>
+        </div>
+
+        <div class="feature-grid" id="featureGrid">
+
+            <button class="feature-card" data-feature="Namaz">
+                <span>🕌</span><p>Namaz</p>
+            </button>
+
+            <button class="feature-card" data-feature="Quran">
+                <span>📖</span><p>Quran</p>
+            </button>
+
+            <button class="feature-card" data-feature="Dua">
+                <span>🤲</span><p>Dua</p>
+            </button>
+
+            <button class="feature-card" data-feature="Tasbih">
+                <span>📿</span><p>Tasbih</p>
+            </button>
+
+            <button class="feature-card" data-feature="Qibla">
+                <span>🧭</span><p>Qibla</p>
+            </button>
+
+            <button class="feature-card" data-feature="99 Names">
+                <span>✨</span><p>99 Names</p>
+            </button>
+
+            <button class="feature-card" data-feature="Islamic Calendar">
+                <span>📅</span><p>Islamic Calendar</p>
+            </button>
+
+            <button class="feature-card" data-feature="Islamic Wallpaper">
+                <span>🖼️</span><p>Islamic Wallpaper</p>
+            </button>
+
+            <button class="feature-card" data-feature="Hadith">
+                <span>📖</span><p>Hadith</p>
+            </button>
+
+            <button class="feature-card" data-feature="Taka Hisab">
+                <span>💰</span><p>Taka Hisab</p>
+            </button>
+
+            <button class="feature-card" data-feature="AI Chat">
+                <span>💬</span><p>AI Chat</p>
+            </button>
+
+            <button class="feature-card" data-feature="Islamic Quiz">
+                <span>❔</span><p>Islamic Quiz</p>
+            </button>
+
+            <button class="feature-card" data-feature="Zakat Calculator">
+                <span>🧮</span><p>Zakat Calculator</p>
+            </button>
+
+            <button class="feature-card" data-feature="Fasting Tracker">
+                <span>🌙</span><p>Fasting Tracker</p>
+            </button>
+
+            <button class="feature-card" data-feature="Daily Quotes">
+                <span>💫</span><p>Daily Quotes</p>
+            </button>
+
+            <button class="feature-card" data-feature="Search">
+                <span>🔍</span><p>Search</p>
+            </button>
+
+            <button class="feature-card" data-feature="Ibadah Tracker">
+                <span>🎯</span><p>Ibadah Tracker</p>
+            </button>
+
+            <button class="feature-card" data-feature="Islamic Learning">
+                <span>📚</span><p>Islamic Learning</p>
+            </button>
+
+            <button class="feature-card" data-feature="Islamic Goal Setting">
+                <span>⭐</span><p>Goal Setting</p>
+            </button>
+
+        </div>
+    </section>
+
+<!-- Qibla Compass Page -->
+<section class="qibla-page" id="qiblaPage" style="display:none;">
+
+    <div class="qibla-header">
+        <button class="qibla-back" id="qiblaBack">←</button>
+        <div>
+            <h2>Qibla Compass</h2>
+            <p>Find the direction of the Holy Kaaba</p>
+        </div>
+    </div>
+
+    <div class="qibla-location-card">
+        <span>📍</span>
+        <div>
+            <h3>Your Location</h3>
+            <p id="qiblaLocation">Location not detected</p>
+        </div>
+        <button id="qiblaLocate">Locate</button>
+    </div>
+
+    <div class="qibla-compass-card">
+
+        <p class="qibla-instruction">
+            Align your device to find the Qibla
+        </p>
+
+        <div class="compass-wrapper">
+            <div class="compass-degree" id="compassDegree">0°</div>
+
+            <div class="compass-circle" id="compassCircle">
+
+                <span class="compass-north">N</span>
+                <span class="compass-east">E</span>
+                <span class="compass-south">S</span>
+                <span class="compass-west">W</span>
+
+                <div class="compass-inner">
+                    <div class="compass-needle">
+                        <div class="needle-gold"></div>
+                        <div class="needle-white"></div>
+                    </div>
+                    <div class="compass-center">🕋</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="qibla-direction">
+            <h2 id="qiblaDirection">--°</h2>
+            <p>Direction to Kaaba</p>
+        </div>
+
+        <button class="qibla-start-btn" id="startCompass">
+            Start Compass
+        </button>
+
+        <p class="qibla-status" id="qiblaStatus">
+            Allow location access to find your Qibla direction.
+        </p>
+
+    </div>
+
+    <div class="qibla-note">
+        <span>✨</span>
+        <p>For accurate direction, keep your device away from magnetic objects.</p>
+    </div>
+
+</section>
+
+<!-- 99 NAMES OF ALLAH PAGE -->
+
+<section id="namesPage" class="names-page" style="display:none;">
+
+    <div class="names-header">
+        <button id="namesBack" class="names-back">← Back</button>
+        <p class="names-label">MISBAH • ASMA UL HUSNA</p>
+        <h1>99 Names of Allah</h1>
+        <p>Beautiful Names of Allah ﷻ</p>
+    </div>
+
+    <div class="names-search">
+        <input
+            type="text"
+            id="namesSearch"
+            placeholder="Search name or meaning..."
+        >
+    </div>
+
+    <div class="names-tabs">
+        <button id="allNamesBtn" class="names-tab active">All Names</button>
+        <button id="favoriteNamesBtn" class="names-tab">♡ Favorites</button>
+    </div>
+
+    <div id="namesCount" class="names-count">
+        99 Beautiful Names
+    </div>
+
+    <div id="namesGrid" class="names-grid"></div>
+
+</section>
+
+
+<!-- HADITH PAGE -->
+<section id="hadithPage" class="hadith-page" style="display:none;">
+
+    <div class="hadith-header">
+        <button id="hadithBack" class="hadith-back">← Back</button>
+
+        <p class="hadith-label">MISBAH • ISLAMIC KNOWLEDGE</p>
+        <h1>Hadith</h1>
+        <p>Words and teachings of Prophet Muhammad ﷺ</p>
+    </div>
+
+    <div class="hadith-search">
+        <input
+            type="text"
+            id="hadithSearch"
+            placeholder="Search Hadith..."
+        >
+    </div>
+
+    <div class="hadith-categories">
+        <button class="hadith-tab active" data-category="All">All</button>
+        <button class="hadith-tab" data-category="Sahih Bukhari">Bukhari</button>
+        <button class="hadith-tab" data-category="Sahih Muslim">Muslim</button>
+        <button class="hadith-tab" data-category="Daily Life">Daily Life</button>
+        <button class="hadith-tab" data-category="Dua">Dua</button>
+    </div>
+
+    <div class="hadith-section-title">
+        <h2>Beautiful Hadith</h2>
+        <p>Learn and reflect every day</p>
+    </div>
+
+    <div id="hadithGrid" class="hadith-grid"></div>
+
+</section>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-page="Home">
+            <span>⌂</span><small>Home</small>
+        </button>
+
+        <button class="nav-item" data-page="Calendar">
+            <span>▦</span><small>Calendar</small>
+        </button>
+
+        <button class="nav-item" data-page="Quran">
+            <span>📖</span><small>Quran</small>
+        </button>
+
+        <button class="nav-item" data-page="Profile">
+            <span>◉</span><small>Profile</small>
+        </button>
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
