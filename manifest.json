@@ -1,0 +1,18 @@
+
+{
+  "name": "MISBAH | Islamic Companion",
+  "short_name": "MISBAH",
+  "description": "Your daily Islamic companion",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#075b46",
+  "background_color": "#f7f4eb",
+  "icons": [
+    {
+      "src": "misbah-logo.png.jpeg",
+      "type": "image/jpeg"
+    }
+  ]
+}
